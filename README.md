@@ -1,3 +1,2 @@
 # Interview
-
-自己总结的一些相关的面试常见问题。
+可以fork+pull issue，会看！
