@@ -8,4 +8,4 @@
 
 #### [5:旋转链表](https://github.com/Carpe-Wang/Interview/blob/main/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/leetcode/%E6%97%8B%E8%BD%AC%E9%93%BE%E8%A1%A8.md)
 
-
+#### [6:环形链表的判断](https://github.com/Carpe-Wang/Interview/blob/main/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/leetcode/%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8.md)
