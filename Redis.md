@@ -120,3 +120,34 @@ public void use(String key, Object data){
 
 # 10:java整合Redis
 [java整合redis](https://github.com/Carpe-Wang/Springboot-Redis) 
+
+# 11:go链接redis
+```go
+package main
+
+import (
+	"fmt"
+	"github.com/go-redis/redis"
+)
+
+var redisDB *redis.Client
+
+func initRedis() (err error) {
+	redisDB = redis.NewClient(&redis.Options{
+		Addr:     "localhost:6379",
+		Password: "",
+		DB:       0,
+	})
+	_, err = redisDB.Ping().Result()
+	if err != nil {
+		return err
+	}
+	return nil
+}
+func main() {
+	err := initRedis()
+	if err != nil {
+		fmt.Println(err)
+	}
+}
+```
