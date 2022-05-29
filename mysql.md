@@ -120,6 +120,7 @@ UNION 用于把来自多个 SELECT 语句的结果组合到一个结果集合中
 
 
 # 14:go链接Mysql进行简单操作
+[详细参考](https://github.com/Carpe-Wang/Go_Mysql-Redis)
 ```go
 package main
 
@@ -146,7 +147,7 @@ var db *sql.DB //声明数据库连接池
 func main() {
 	connectMysql()
 	//insertUser(User{
-	//	Username: "wangkaipeng",
+	//	Username: "CarpeWang",
 	//	Password: "demo01",
 	//})
 }
