@@ -122,6 +122,7 @@ public void use(String key, Object data){
 [java整合redis](https://github.com/Carpe-Wang/Springboot-Redis) 
 
 # 11:go链接redis
+[detailed information](https://github.com/Carpe-Wang/Go_Mysql-Redis)
 ```go
 package main
 
