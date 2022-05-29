@@ -18,7 +18,7 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	}
 
 	for fast.Next != nil {
-		slow, fast = slow.Next, fast.Next
+		slow, fast = slow.Next, fast.Next //然后 slow 和 fast 一起走，当 fast 到链表尾部时，此时 slow.Next 就是我们想要删除的节点。
 	}
 
 	slow.Next = slow.Next.Next //删除
