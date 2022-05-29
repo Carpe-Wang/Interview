@@ -11,4 +11,5 @@
   * [java](https://github.com/Carpe-Wang/Interview/blob/main/java.md)
   * [go](https://github.com/Carpe-Wang/Interview/blob/main/Go.md)
 
-* [数据结构](https://github.com/Carpe-Wang/Interview/blob/main/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/LinkNode.md)
+* 数据结构:
+  * [链表](https://github.com/Carpe-Wang/Interview/blob/main/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/LinkNode.md)
