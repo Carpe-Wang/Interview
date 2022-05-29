@@ -364,3 +364,14 @@ func main() {
 ```
 * 避免内存逃逸
   * 有一个函数叫做noescape可以在逃逸分析中隐藏一个指针。
+
+# 5:GMP
+> 在最初的GM模型中，如果一个Goroutine阻塞会导致一个M终止，这就导致效率低下，所以引入一个中间件P，用来统一管理Goroutine
+* 【G】goroutine是Golang实现的用户空间的轻量级的线程
+* 【M】代表操作系统线程
+* 【P】处理器, 它包含了待运行goroutine。
+* 如果线程M想运行goroutine，必须先获取P，从P中获取goroutine执行。
+* 当G1向buf已经满了的ch发送数据的时候，检测到hchan的buf已经满了，会通知调度器，调度器会将G1的状态设置为waiting, 并移除与线程M的联系，然后从P的runqueue中选择一个goroutine在线程M中执行，此时G1就是阻塞状态，但是不是操作系统的线程阻塞，所以这个时候只用消耗少量的资源。
+* channel中的数据遵循队列先进先出原则。每一个goroutine抢到处理器的时间点不一致，gorouine的执行本身不能保证顺序
+因为在对buf中的数据进行入队和出队操作时，为当前chnnel使用了互斥锁，防止多个线程并发修改数据，所以Channel为什么是线程安全的。
+![在这里插入图片描述](https://img-blog.csdnimg.cn/b44405b1fd9d4413a959eb7f4f98427d.png)
