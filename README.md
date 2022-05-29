@@ -12,4 +12,4 @@
   * [go](https://github.com/Carpe-Wang/Interview/blob/main/Go.md)
 
 * 数据结构:
-  * [链表]([https://github.com/Carpe-Wang/Interview/blob/main/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/LinkNode.md](https://github.com/Carpe-Wang/Interview/tree/main/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8))
+  * [链表](https://github.com/Carpe-Wang/Interview/tree/main/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8)
