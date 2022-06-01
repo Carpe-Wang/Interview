@@ -1,7 +1,9 @@
 # Interview
 
-* 计算机基础:
+* 计算机基础: 
   * [操作系统](https://github.com/Carpe-Wang/Interview/blob/main/OS.md)
+      * [操作系统-中](https://github.com/Carpe-Wang/Interview/blob/main/OS.md)
+      * [Operating System-English](https://github.com/Carpe-Wang/Interview/blob/main/OS%20English.md)
   * [计算机网络](https://github.com/Carpe-Wang/Interview/blob/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.md)
 * 数据库:
   * [mysql](https://github.com/Carpe-Wang/Interview/blob/main/mysql.md)
