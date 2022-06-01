@@ -1,3 +1,3 @@
 
 # [操作系统-中](https://github.com/Carpe-Wang/Interview/blob/main/OS.md)
-# [Operating System-English]([https://github.com/Carpe-Wang/Interview/blob/main/OS%20English.md](https://github.com/Carpe-Wang/Interview/blob/main/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/OperatingSystem.md))
+# [Operating System-English](https://github.com/Carpe-Wang/Interview/blob/main/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/OperatingSystem.md)
