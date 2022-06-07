@@ -383,3 +383,82 @@ func main() {
 	* 对象被一个栈对象删除引用，成为另一个栈对象的下游
 	* 对象被一个堆对象删除引用，成为另一个堆对象的下游
 	* 对象从一个栈对象删除引用，成为另一个堆对象的下游
+
+
+
+# 7:深拷贝和浅拷贝
+### 1:引言：
+> 关于这个浅拷贝，我记得一个很有趣的小经历，当时在用java刷力扣，然后方法的入参是一个数组，我的想法是定义一个新数组然后直接将入参排序结果给新数组，于是我就有了下面的代码
+```java	
+public class demo1 {
+
+    public static void main(String[] args) {
+        int[] a=new int[]{4,6,8,3,1,5,8};
+        demo(a);
+    }
+    public static void demo (int[] a){
+        int [] b=a;
+        Arrays.sort(b);
+        System.out.println(Arrays.toString(a));
+    }
+}
+```
+
+```java
+public class demo2 {
+
+    public static void main(String[] args) {
+        int[] a=new int[]{4,6,8,3,1,5,8};
+        demo(a);
+    }
+    public static void demo (int[] a){
+        int [] b=a.clone();
+        Arrays.sort(b);
+        System.out.println(Arrays.toString(a));
+    }
+}
+
+```
+>在demo1中，就对b进行排序，保持a数组的不进行排序。但是打印结果就是[1, 3, 4, 5, 6, 8, 8]。
+>但是在demo2中，打印结果就是[4, 6, 8, 3, 1, 5, 8]。
+>这就是一个浅拷贝和深拷贝的问题
+###  2:两者区别：
+>提到的深拷贝和浅拷贝，则指的是引用类型的值处理方案。
+浅拷贝指的是，把变量里面存的内存地址拷贝了，所指向的真实值并没拷贝。
+![在这里插入图片描述](https://img-blog.csdnimg.cn/bcfc2f3edf924cbda447392a3454909f.png)
+0x004 浅拷贝到了 0x003 里面，实际上只是拷贝了一个 0x006 这个内存地址。
+go代码如下：
+
+
+```go
+//浅拷贝demo
+func main() {
+	 a := []string{"1","2","3"}
+	 b := a
+	 a[0]="ko"
+	 fmt.Println("a:",a)
+	 fmt.Println("b:",b)
+}
+
+//执行结果
+$ go run cp.go 
+a: [ko 2 3]
+b: [ko 2 3]
+```
+
+```go
+//深拷贝demo
+func main() {
+ a := []string{"1","2","3"}
+ // 初始化一个空数组
+ b := make([]string,len(a),cap(a))
+ copy(b, a)
+ a[0]="ko"
+ fmt.Println("a:",a)
+ fmt.Println("b:",b)
+}
+//执行结果
+$ go run cp.go 
+a: [ko 2 3]
+b: [1 2 3]
+```
