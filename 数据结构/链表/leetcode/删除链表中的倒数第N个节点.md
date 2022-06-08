@@ -25,3 +25,43 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	return dummy.Next
 }
 ```
+
+>刚才突然又刷到了，这次写一个java的快慢指针，和go的栈。
+* java快慢指针
+```java
+class Solution {
+public ListNode removeNthFromEnd(ListNode head, int n) {
+    ListNode temp = new ListNode(-1);
+    temp.next = head;
+    ListNode fast = temp;
+    ListNode slow = temp;
+    while(n > 0) {
+        fast = fast.next;
+        n--;
+    }
+    ListNode pre = null;
+    while(fast != null) {
+        pre = slow;
+        fast = fast.next;
+        slow = slow.next;
+    }
+    pre.next = slow.next;
+    return temp.next;
+    }
+}
+```
+
+
+* go 栈
+```go
+func removeNthFromEnd(head *ListNode, n int) *ListNode {
+    nodes := []*ListNode{}
+    dummy := &ListNode{0, head}
+    for node := dummy; node != nil; node = node.Next {
+        nodes = append(nodes, node)
+    }
+    prev := nodes[len(nodes)-1-n]
+    prev.Next = prev.Next.Next
+    return dummy.Next
+}
+```
